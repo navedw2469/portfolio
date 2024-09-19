@@ -9,12 +9,12 @@ function NavItem({ href, icon, isActive, getActiveClass }) {
   return (
     <div className="flex flex-col items-center justify-start">
       <Link
-        className={`w-12 h-12 rounded-full border border-gray-700 flex justify-center items-center hover:-translate-y-1 transition-transform ${getActiveClass(
+        className={`w-10 h-10 rounded-full border border-zinc-700 flex justify-center items-center hover:-translate-y-1 transition-transform ${getActiveClass(
           href
         )}`}
         href={href}
       >
-        <Image src={icon} alt="" width={32} height={32} />
+        <Image src={icon} alt="" width={24} height={24} />
       </Link>
       {isActive && <div className="mb-1 w-1 h-1 rounded-full bg-white"></div>}
     </div>
@@ -28,8 +28,8 @@ function Navbar() {
 
   const getActiveClass = (path) => {
     return router.pathname === path
-      ? "bg-gray-700 -translate-y-2 hover:-translate-y-3" // Active tab style
-      : "bg-gray-900 hover:bg-gray-700"; // Inactive tab style
+      ? "bg-zinc-700 -translate-y-2 hover:-translate-y-3" // Active tab style
+      : "bg-zinc-900 hover:bg-zinc-700"; // Inactive tab style
   };
 
   const isCurrentActiveClass = (path) => {
@@ -37,7 +37,7 @@ function Navbar() {
   };
 
   return (
-    <div className="h-16 p-2 gap-2 bg-black border border-gray-700 rounded-full flex justify-center items-center">
+    <div className="h-[50px] px-1 gap-2 bg-black border border-zinc-700 rounded-full flex justify-center items-center">
       <NavItem
         href="/"
         icon="/profile.svg"
@@ -57,58 +57,58 @@ function Navbar() {
         getActiveClass={getActiveClass}
       />
 
-      <div className="h-12 border border-gray-700 mx-2"></div>
+      <div className="h-8 border border-zinc-700 mx-2"></div>
 
       {isNightMode ? (
         <div
-          className={`w-12 h-12 rounded-full flex justify-center items-center bg-gray-900 border border-gray-700 hover:bg-gray-700 cursor-pointer`}
+          className={`w-10 h-10 rounded-full flex justify-center items-center bg-zinc-900 border border-zinc-700 hover:bg-zinc-700 cursor-pointer`}
           onClick={() => setIsNightMode(!isNightMode)}
         >
-          <Image src="/moon.svg" alt="" width={32} height={32} />
+          <Image src="/moon.svg" alt="" width={24} height={24} />
         </div>
       ) : (
         <div
-          className={`w-12 h-12 rounded-full flex justify-center items-center bg-gray-900 border border-gray-700 hover:bg-gray-700 cursor-pointer`}
+          className={`w-10 h-10 rounded-full flex justify-center items-center bg-zinc-900 border border-zinc-700 hover:bg-zinc-700 cursor-pointer`}
           onClick={() => setIsNightMode(!isNightMode)}
         >
-          <Image src="/sun.svg" alt="" width={32} height={32} />
+          <Image src="/sun.svg" alt="" width={24} height={24} />
         </div>
       )}
 
       {!isOptionsActive ? (
         <div
-          className={`w-12 h-12 rounded-full flex justify-center items-center bg-gray-900 border border-gray-700 hover:bg-gray-700 cursor-pointer`}
+          className={`w-10 h-10 rounded-full flex justify-center items-center bg-zinc-900 border border-zinc-700 hover:bg-zinc-700 cursor-pointer`}
           onClick={() => setIsOptionActive(!isOptionsActive)}
         >
-          <Image src="/options.svg" alt="" width={32} height={32} />
+          <Image src="/options.svg" alt="" width={24} height={24} />
         </div>
       ) : (
-        <div className="flex flex-col gap-2 bg-gray-900 rounded-full -translate-y-[112px]">
+        <div className="flex flex-col gap-1 bg-zinc-900 rounded-full -translate-y-[88px]">
           <div
-            className={`w-12 h-12 rounded-full flex justify-center items-center bg-gray-900 border border-gray-700 hover:bg-gray-700 cursor-pointer`}
+            className={`w-10 h-10 rounded-full flex justify-center items-center bg-zinc-900 border border-zinc-700 hover:bg-zinc-700 cursor-pointer`}
           >
-            <Image src="/github1.svg" alt="" width={32} height={32} />
+            <Image src="/github1.svg" alt="" width={24} height={24} />
           </div>
           <div
-            className={`w-12 h-12 rounded-full flex justify-center items-center bg-gray-900 border border-gray-700 hover:bg-gray-700 cursor-pointer`}
+            className={`w-10 h-10 rounded-full flex justify-center items-center bg-zinc-900 border border-zinc-700 hover:bg-zinc-700 cursor-pointer`}
           >
-            <Image src="/linkedin.svg" alt="" width={32} height={32} />
+            <Image src="/linkedin.svg" alt="" width={24} height={24} />
           </div>
           <div
-            className={`w-12 h-12 rounded-full flex justify-center items-center bg-gray-900 border border-gray-700 hover:bg-gray-700 cursor-pointer`}
+            className={`w-10 h-10 rounded-full flex justify-center items-center bg-zinc-900 border border-zinc-700 hover:bg-zinc-700 cursor-pointer`}
           >
-            <Image src="/email.svg" alt="" width={32} height={32} />
+            <Image src="/email.svg" alt="" width={24} height={24} />
           </div>
           <div
-            className={`w-12 h-12 rounded-full flex justify-center items-center bg-gray-900 border border-gray-700 hover:bg-gray-700 cursor-pointer`}
+            className={`w-10 h-10 rounded-full flex justify-center items-center bg-zinc-900 border border-zinc-700 hover:bg-zinc-700 cursor-pointer`}
           >
-            <Image src="/download.svg" alt="" width={32} height={32} />
+            <Image src="/download.svg" alt="" width={24} height={24} />
           </div>
           <div
-            className={`w-12 h-12 rounded-full flex justify-center items-center bg-gray-900 border border-gray-700 hover:bg-gray-700 cursor-pointer`}
+            className={`w-10 h-10 rounded-full flex justify-center items-center bg-zinc-900 border border-zinc-700 hover:bg-zinc-700 cursor-pointer`}
             onClick={() => setIsOptionActive(!isOptionsActive)}
           >
-            <Image src="/cross.svg" alt="" width={32} height={32} />
+            <Image src="/cross.svg" alt="" width={24} height={24} />
           </div>
         </div>
       )}

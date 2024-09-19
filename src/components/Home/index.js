@@ -41,7 +41,7 @@ function SkillsSection() {
 function Home() {
   return (
     <div className="flex flex-col items-center">
-      <div className="fixed left-0 right-0 bottom-10 flex justify-center">
+      <div className="fixed left-0 right-0 bottom-5 flex justify-center">
         <Navbar />
       </div>
       <div className="w-[768px] p-4 mt-6">
@@ -55,7 +55,7 @@ function Home() {
               className="rounded-xl"
             />
             <h1 className="font-medium text-xl mt-1">Naved Inam</h1>
-            <p className="text-gray-300">Software Developer</p>
+            <p className="text-zinc-300">Software Developer</p>
           </div>
           <div className="w-fit text-wrap flex-1">
             <p>
@@ -80,9 +80,9 @@ function Home() {
           <div className="flex justify-between flex-1">
             <div>
               <p className="font-medium">Associate Software Engineer</p>
-              <p className="font-light text-gray-500">Cogoport Pvt. Ltd.</p>
+              <p className="font-light text-zinc-500">Cogoport Pvt. Ltd.</p>
             </div>
-            <p className="flex flex-col justify-center font-light text-gray-500 ">
+            <p className="flex flex-col justify-center font-light text-zinc-500 ">
               06/2022 - 07/2023
             </p>
           </div>
@@ -98,11 +98,11 @@ function Home() {
             <div className="flex justify-between">
               <div>
                 <p>Master of Technology</p>
-                <p className="font-light text-gray-500">
+                <p className="font-light text-zinc-500">
                   Indian Institute of Technology Indore
                 </p>
               </div>
-              <p className="flex flex-col justify-center font-light text-gray-500 ">
+              <p className="flex flex-col justify-center font-light text-zinc-500 ">
                 07/2023 - Present
               </p>
             </div>
@@ -110,11 +110,11 @@ function Home() {
             <div className="flex justify-between">
               <div>
                 <p>Bachelor of Technology</p>
-                <p className="font-light text-gray-500">
+                <p className="font-light text-zinc-500">
                   Indian Institute of Information Technology Kalyani
                 </p>
               </div>
-              <p className="flex flex-col justify-center font-light text-gray-500 ">
+              <p className="flex flex-col justify-center font-light text-zinc-500 ">
                 08/2018 - 05/2022
               </p>
             </div>
